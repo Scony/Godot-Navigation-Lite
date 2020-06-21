@@ -9,3 +9,8 @@
 !.gitignore
 api.json
 .vscode/*
+*.dll
+*.exp
+*.ilk
+*.lib
+*.so
