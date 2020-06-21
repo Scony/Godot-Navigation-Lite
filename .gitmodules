@@ -2,5 +2,5 @@
 	path = godot-cpp
 	url = https://github.com/GodotNativeTools/godot-cpp
 [submodule "src/recastnavigation"]
-	path = src/recastnavigation
+	path = recastnavigation
 	url = https://github.com/recastnavigation/recastnavigation.git
