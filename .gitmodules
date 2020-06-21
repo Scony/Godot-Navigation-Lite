@@ -1,6 +1,8 @@
 [submodule "godot-cpp"]
 	path = godot-cpp
 	url = https://github.com/GodotNativeTools/godot-cpp
-[submodule "src/recastnavigation"]
+        ignore = dirty
+[submodule "recastnavigation"]
 	path = recastnavigation
 	url = https://github.com/recastnavigation/recastnavigation.git
+        ignore = dirty
