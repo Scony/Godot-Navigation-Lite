@@ -21,17 +21,17 @@ var navmesh = null
 
 
 func _enter_tree():
-	navmesh_parameters = preload("res://addons/godot-navigation-lite/bin/navmesh_parameters.gdns")
-	cached_navmesh_parameters = preload("res://addons/godot-navigation-lite/bin/cached_navmesh_parameters.gdns")
-	navigation_script = preload("res://addons/godot-navigation-lite/bin/detour_navigation.gdns")
+	navmesh_parameters = preload("res://addons/Godot-Navigation-Lite/bin/navmesh_parameters.gdns")
+	cached_navmesh_parameters = preload("res://addons/Godot-Navigation-Lite/bin/cached_navmesh_parameters.gdns")
+	navigation_script = preload("res://addons/Godot-Navigation-Lite/bin/detour_navigation.gdns")
 
 	add_custom_type(
 		"DetourNavigation", 
 		"Spatial", 
-		preload("res://addons/godot-navigation-lite/detour_navigation_bootstrap.gd"), 
-		preload("res://addons/godot-navigation-lite/icons/navigation_icon.svg")
+		preload("res://addons/Godot-Navigation-Lite/detour_navigation_bootstrap.gd"), 
+		preload("res://addons/Godot-Navigation-Lite/icons/navigation_icon.svg")
 	)
-	navmesh = preload("res://addons/godot-navigation-lite/bin/detour_navigation_mesh_cached.gdns")
+	navmesh = preload("res://addons/Godot-Navigation-Lite/bin/detour_navigation_mesh_cached.gdns")
 
 	var editor_interface = get_editor_interface()
 	var base_control = editor_interface.get_base_control()
