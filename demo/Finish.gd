@@ -17,6 +17,7 @@ Color(1, 1, 0), Color(1, 0, 0), Color(0, 1, 1), Color(0, 1, 0), Color(0, 0, 1), 
 	
 
 func _process(_delta):
+	# TODO: use raw mouse clicks
 	if Input.is_action_just_pressed("left_click"):
 		var m_pos = get_viewport().get_mouse_position()
 		var new_origin = raycast_from_mouse(m_pos, 1)

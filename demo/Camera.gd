@@ -1,13 +1,14 @@
 extends Camera
 
 
-var staticObst = preload("res://StaticBoxPillar.tscn")
-var dynamicObst = preload("res://DynamicRoundPillar.tscn")
+var staticObst = preload("res://addons/Godot-Navigation-Lite/demo/StaticBoxPillar.tscn")
+var dynamicObst = preload("res://addons/Godot-Navigation-Lite/demo/DynamicRoundPillar.tscn")
 
 func _process(_delta):
-	if Input.is_action_just_pressed("add_static"):
+	# TODO: use raw keystrokes
+	if Input.is_action_just_pressed("ui_select"):
 		manage_click(staticObst)
-	if Input.is_action_just_pressed("add_dynamic"):
+	if Input.is_action_just_pressed("ui_cancel"):
 		manage_click(dynamicObst)
 	
 
