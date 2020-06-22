@@ -1,7 +1,7 @@
 #ifndef TILECACHE_GENERATOR_H
 #define TILECACHE_GENERATOR_H
 
-#include "navmesh_generator.h"
+#include "DetourNavigationMeshGenerator.hpp"
 #include "DetourTileCache.h"
 
 namespace godot

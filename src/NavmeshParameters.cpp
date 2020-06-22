@@ -1,4 +1,4 @@
-#include "navmesh_parameters.h"
+#include "NavmeshParameters.hpp"
 
 static const int DEFAULT_TILE_SIZE = 64;
 static const float DEFAULT_CELL_SIZE = 0.3f;

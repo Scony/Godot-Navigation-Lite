@@ -32,10 +32,10 @@
 #include "RecastAlloc.h"
 #include "RecastAssert.h"
 #include "helpers.h"
-#include "navigation_mesh.h"
-#include "navmesh_generator.h"
-#include "tilecache_generator.h"
-#include "tilecache_navmesh.h"
+#include "DetourNavigationMesh.hpp"
+#include "DetourNavigationMeshGenerator.hpp"
+#include "DetourNavigationMeshCacheGenerator.hpp"
+#include "DetourNavigationMeshCached.hpp"
 
 namespace godot
 {

@@ -1,6 +1,6 @@
-#include "navigation.h"
+#include "DetourNavigation.hpp"
 #define QUICKHULL_IMPLEMENTATION
-#include "quickhull.h"
+#include "helpers/quickhull.h"
 
 using namespace godot;
 

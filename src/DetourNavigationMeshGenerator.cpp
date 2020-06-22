@@ -1,4 +1,4 @@
-#include "navmesh_generator.h"
+#include "DetourNavigationMeshGenerator.hpp"
 
 using namespace godot;
 DetourNavigationMeshGenerator::DetourNavigationMeshGenerator()

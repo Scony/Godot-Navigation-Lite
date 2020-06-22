@@ -17,7 +17,7 @@
 #include <Mesh.hpp>
 #include <ArrayMesh.hpp>
 
-#include "navmesh_parameters.h"
+#include "NavmeshParameters.hpp"
 #include "helpers.h"
 #include "tilecache_helpers.h"
 #include "DetourNavMesh.h"

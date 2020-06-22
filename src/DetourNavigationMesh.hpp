@@ -24,9 +24,9 @@
 #include "Recast.h"
 #include "helpers.h"
 
-#include "navigation_query.h"
-#include "navmesh_generator.h"
-#include "navmesh_parameters.h"
+#include "DetourNavigationQuery.hpp"
+#include "DetourNavigationMeshGenerator.hpp"
+#include "NavmeshParameters.hpp"
 #include "serializer.h"
 #include "tilecache_helpers.h"
 

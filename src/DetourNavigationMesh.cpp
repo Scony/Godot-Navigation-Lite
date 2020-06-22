@@ -1,6 +1,5 @@
-#include "navigation_mesh.h"
-#include "navigation.h"
-#include "navigation_query.h"
+#include "DetourNavigationMesh.hpp"
+#include "DetourNavigation.hpp"
 
 namespace godot
 {

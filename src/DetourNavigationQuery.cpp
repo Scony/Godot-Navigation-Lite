@@ -1,4 +1,4 @@
-#include "navigation_query.h"
+#include "DetourNavigationQuery.hpp"
 
 using namespace godot;
 

@@ -1,5 +1,5 @@
-#include "tilecache_navmesh.h"
-#include "navigation.h"
+#include "DetourNavigationMeshCached.hpp"
+#include "DetourNavigation.hpp"
 
 using namespace godot;
 
