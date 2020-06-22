@@ -28,14 +28,14 @@
 #include <World.hpp>
 
 #include "DetourNavMesh.h"
+#include "DetourNavigationMesh.hpp"
+#include "DetourNavigationMeshCacheGenerator.hpp"
+#include "DetourNavigationMeshCached.hpp"
+#include "DetourNavigationMeshGenerator.hpp"
 #include "Recast.h"
 #include "RecastAlloc.h"
 #include "RecastAssert.h"
 #include "helpers.h"
-#include "DetourNavigationMesh.hpp"
-#include "DetourNavigationMeshGenerator.hpp"
-#include "DetourNavigationMeshCacheGenerator.hpp"
-#include "DetourNavigationMeshCached.hpp"
 
 namespace godot
 {
