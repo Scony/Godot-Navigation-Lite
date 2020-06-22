@@ -1,3 +1,5 @@
+all: format-check
+
 setup:
 	godot --gdnative-generate-json-api api.json
 	# cd godot-cpp && scons platform=linux generate_bindings=yes bits=64 target=release -j 4 && cd -
@@ -5,3 +7,6 @@ setup:
 
 build:
 	scons platform=linux target=release -j 4
+
+format-check:
+	clang-format --style=file --dry-run -Werror src/navigation_mesh.h src/navigation_mesh.cpp src/navigation.h src/navigation.cpp
