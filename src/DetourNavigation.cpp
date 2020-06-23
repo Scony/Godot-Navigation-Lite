@@ -464,10 +464,12 @@ void DetourNavigation::build_navmesh(DetourNavigationMesh* navmesh)
       dtnavmesh_gen->input_aabbs,
       dtnavmesh_gen->collision_ids,
       navmesh);
-  Godot::print(
-      ("Successfully collected " + std::to_string(dtnavmesh_gen->input_meshes->size()) + " meshes")
-          .c_str());
-
+  if (OS::get_singleton()->is_stdout_verbose())
+  {
+    Godot::print(("Successfully collected " + std::to_string(dtnavmesh_gen->input_meshes->size()) +
+                  " meshes")
+                     .c_str());
+  }
   dtnavmesh_gen->build();
 
   navmesh->detour_navmesh = dtnavmesh_gen->detour_navmesh;

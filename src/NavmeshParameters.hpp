@@ -1,9 +1,9 @@
-#ifndef NAVMESH_PARAMETERS_H
-#define NAVMESH_PARAMETERS_H
+#pragma once
 
 #include <Godot.hpp>
 #include <OS.hpp>
 #include <Resource.hpp>
+
 #include "helpers.h"
 
 namespace godot
@@ -13,17 +13,13 @@ class NavmeshParameters : public Resource
   GODOT_CLASS(NavmeshParameters, Resource);
 
  public:
-  NavmeshParameters();
-  ~NavmeshParameters();
+  static void _register_methods();
 
   void _init();
-  void _ready();
-  static void _register_methods();
 
   SETGET(tile_size, int);
   SETGET(cell_size, float);
   SETGET(cell_height, float);
-
   SETGET(partition_type, int);
   SETGET(agent_height, float);
   SETGET(agent_radius, float);
@@ -38,14 +34,6 @@ class NavmeshParameters : public Resource
   SETGET(padding, Vector3);
   SETGET(max_layers, int);
 
-  inline real_t get_tile_edge_length() { return (real_t)(get_tile_size() * get_cell_size()); };
-
-  enum partition_t
-  {
-    PARTITION_WATERSHED,
-    PARTITION_MONOTONE,
-  };
+  inline real_t get_tile_edge_length() { return get_tile_size() * get_cell_size(); };
 };
 } // namespace godot
-
-#endif

@@ -1,23 +1,9 @@
 #include "NavmeshParameters.hpp"
+#include "Constants.hpp"
 
-static const int DEFAULT_TILE_SIZE = 64;
-static const float DEFAULT_CELL_SIZE = 0.3f;
-static const float DEFAULT_CELL_HEIGHT = 0.2f;
-static const float DEFAULT_AGENT_HEIGHT = 2.0f;
-static const float DEFAULT_AGENT_RADIUS = 0.6f;
-static const float DEFAULT_AGENT_MAX_CLIMB = 0.9f;
-static const float DEFAULT_AGENT_MAX_SLOPE = 45.0f;
-static const float DEFAULT_REGION_MIN_SIZE = 8.0f;
-static const float DEFAULT_REGION_MERGE_SIZE = 20.0f;
-static const float DEFAULT_EDGE_MAX_LENGTH = 12.0f;
-static const float DEFAULT_EDGE_MAX_ERROR = 1.3f;
-static const float DEFAULT_DETAIL_SAMPLE_DISTANCE = 6.0f;
-static const float DEFAULT_DETAIL_SAMPLE_MAX_ERROR = 1.0f;
-
-static const int DEFAULT_MAX_OBSTACLES = 1000;
-static const int DEFAULT_MAX_LAYERS = 8;
-
-using namespace godot;
+namespace godot
+{
+using namespace constants;
 
 void NavmeshParameters::_register_methods()
 {
@@ -36,7 +22,6 @@ void NavmeshParameters::_register_methods()
       &NavmeshParameters::set_cell_height,
       &NavmeshParameters::get_cell_height,
       DEFAULT_CELL_HEIGHT);
-
   register_property<NavmeshParameters, real_t>(
       "agent_height",
       &NavmeshParameters::set_agent_height,
@@ -57,7 +42,6 @@ void NavmeshParameters::_register_methods()
       &NavmeshParameters::set_agent_max_slope,
       &NavmeshParameters::get_agent_max_slope,
       DEFAULT_AGENT_MAX_SLOPE);
-
   register_property<NavmeshParameters, real_t>(
       "region_min_size",
       &NavmeshParameters::set_region_min_size,
@@ -78,7 +62,6 @@ void NavmeshParameters::_register_methods()
       &NavmeshParameters::set_edge_max_error,
       &NavmeshParameters::get_edge_max_error,
       DEFAULT_EDGE_MAX_ERROR);
-
   register_property<NavmeshParameters, real_t>(
       "detail_sample_distance",
       &NavmeshParameters::set_detail_sample_distance,
@@ -89,8 +72,6 @@ void NavmeshParameters::_register_methods()
       &NavmeshParameters::set_detail_sample_max_error,
       &NavmeshParameters::get_detail_sample_max_error,
       DEFAULT_DETAIL_SAMPLE_MAX_ERROR);
-  // register_property<NavmeshParameters, Vector3>("padding", &NavmeshParameters::set_padding,
-  // &NavmeshParameters::get_padding, Vector3(1.0f, 1.0f, 1.0f));
   register_property<NavmeshParameters, int>(
       "max_layers",
       &NavmeshParameters::set_max_layers,
@@ -98,15 +79,8 @@ void NavmeshParameters::_register_methods()
       DEFAULT_MAX_LAYERS);
 }
 
-NavmeshParameters::NavmeshParameters() {}
-
 void NavmeshParameters::_init()
 {
-  if (OS::get_singleton()->is_stdout_verbose())
-  {
-    Godot::print("Navigation parameters inited.");
-  }
-
   tile_size = DEFAULT_TILE_SIZE;
   cell_size = DEFAULT_CELL_SIZE;
   cell_height = DEFAULT_CELL_HEIGHT;
@@ -126,7 +100,4 @@ void NavmeshParameters::_init()
   padding = Vector3(1.f, 1.f, 1.f);
   max_layers = DEFAULT_MAX_LAYERS;
 }
-
-void NavmeshParameters::_ready() {}
-
-NavmeshParameters::~NavmeshParameters() {}
+} // namespace godot

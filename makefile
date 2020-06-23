@@ -9,4 +9,4 @@ build:
 	scons platform=linux target=release -j 4
 
 format-check:
-	clang-format --style=file --dry-run -Werror src/navigation_mesh.h src/navigation_mesh.cpp src/navigation.h src/navigation.cpp
+	clang-format --style=file --dry-run -Werror src/*.[ch]pp
