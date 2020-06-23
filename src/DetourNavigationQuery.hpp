@@ -1,9 +1,10 @@
-#ifndef NAVIGATION_QUERY_H
-#define NAVIGATION_QUERY_H
+#pragma once
+
+#include <string>
+
 #include <DetourNavMeshQuery.h>
 #include <Dictionary.hpp>
 #include <Godot.hpp>
-#include <string>
 
 #include "DetourNavigationQueryFilter.hpp"
 
@@ -50,4 +51,3 @@ class DetourNavigationQuery
       DetourNavigationQueryFilter* filter);
 };
 } // namespace godot
-#endif

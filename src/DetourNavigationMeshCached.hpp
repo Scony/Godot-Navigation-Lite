@@ -1,5 +1,4 @@
-#ifndef TILECACHE_NAVMESH_H
-#define TILECACHE_NAVMESH_H
+#pragma once
 
 #include "DetourNavigationMesh.hpp"
 #include "DetourNavigationMeshCacheGenerator.hpp"
@@ -89,4 +88,3 @@ class DetourNavigationMeshCached : public DetourNavigationMesh
 };
 
 } // namespace godot
-#endif

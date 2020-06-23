@@ -1,5 +1,10 @@
-#ifndef NAVMESH_GENERATOR_H
-#define NAVMESH_GENERATOR_H
+#pragma once
+
+#include <algorithm>
+#include <iostream>
+#include <list>
+#include <string>
+#include <vector>
 
 #include <ArrayMesh.hpp>
 #include <Geometry.hpp>
@@ -11,19 +16,15 @@
 #include <SceneTree.hpp>
 #include <Spatial.hpp>
 #include <SpatialMaterial.hpp>
-#include <algorithm>
-#include <iostream>
-#include <list>
-#include <string>
-#include <vector>
 
 #include "DetourNavMesh.h"
 #include "DetourNavMeshBuilder.h"
 #include "DetourTileCache.h"
-#include "NavmeshParameters.hpp"
 #include "Recast.h"
 #include "helpers.h"
 #include "tilecache_helpers.h"
+
+#include "NavmeshParameters.hpp"
 
 namespace godot
 {
@@ -119,4 +120,3 @@ class DetourNavigationMeshGenerator
 };
 
 } // namespace godot
-#endif

@@ -23,12 +23,12 @@
 #include "DetourTileCache.h"
 #include "Recast.h"
 #include "helpers.h"
+#include "serializer.h"
+#include "tilecache_helpers.h"
 
 #include "DetourNavigationMeshGenerator.hpp"
 #include "DetourNavigationQuery.hpp"
 #include "NavmeshParameters.hpp"
-#include "serializer.h"
-#include "tilecache_helpers.h"
 
 namespace godot
 {

@@ -1,4 +1,5 @@
 #include "DetourNavigation.hpp"
+
 #define QUICKHULL_IMPLEMENTATION
 #include "helpers/quickhull.h"
 

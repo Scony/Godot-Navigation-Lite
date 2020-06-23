@@ -1,9 +1,9 @@
-#ifndef TILECACHE_GENERATOR_H
-#define TILECACHE_GENERATOR_H
+#pragma once
+
+#include "DetourTileCache.h"
 
 #include "CachedNavmeshParameters.hpp"
 #include "DetourNavigationMeshGenerator.hpp"
-#include "DetourTileCache.h"
 
 namespace godot
 {
@@ -67,4 +67,3 @@ class DetourNavigationMeshCacheGenerator : public DetourNavigationMeshGenerator
 };
 
 } // namespace godot
-#endif
