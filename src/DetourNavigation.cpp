@@ -467,17 +467,14 @@ void DetourNavigation::build_navmesh(DetourNavigationMesh* navmesh)
       dtnavmesh_gen->input_aabbs,
       dtnavmesh_gen->collision_ids,
       navmesh);
-  if (OS::get_singleton()->is_stdout_verbose())
-  {
-    Godot::print(("Successfully collected " + std::to_string(dtnavmesh_gen->input_meshes->size()) +
-                  " meshes")
-                     .c_str());
-  }
+  Godot::print(("DetourNavigation::build_navmesh(): collected " +
+                std::to_string(dtnavmesh_gen->input_meshes->size()) + " meshes")
+                   .c_str());
   dtnavmesh_gen->build();
 
   navmesh->detour_navmesh = dtnavmesh_gen->detour_navmesh;
   navmesh->build_debug_mesh(true);
-  navmesh->debug_mesh_instance->set_owner(navmesh);
+  // navmesh->debug_mesh_instance->set_owner(navmesh); // causes crash
 }
 
 void DetourNavigation::build_navmesh_cached(DetourNavigationMeshCached* navmesh)
