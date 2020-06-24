@@ -47,6 +47,7 @@ class DetourNavigation : public Spatial
   {
     PARSED_GEOMETRY_STATIC_COLLIDERS = 0,
     PARSED_GEOMETRY_MESH_INSTANCES = 1,
+    PARSED_GEOMETRY_STATIC_COLLIDERS_BY_GROUP = 2,
   };
 
  public:

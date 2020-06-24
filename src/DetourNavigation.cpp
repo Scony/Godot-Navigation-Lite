@@ -459,7 +459,9 @@ void DetourNavigation::build_navmesh(DetourNavigationMesh* navmesh)
   DetourNavigationMeshGenerator* dtnavmesh_gen = navmesh->init_generator(get_global_transform());
 
   DetourNavigation::collect_geometry(
-      get_children(),
+      parsed_geometry_type == PARSED_GEOMETRY_STATIC_COLLIDERS_BY_GROUP
+          ? get_tree()->get_nodes_in_group(navmesh->get_group_name())
+          : get_children(),
       dtnavmesh_gen->input_meshes,
       dtnavmesh_gen->input_transforms,
       dtnavmesh_gen->input_aabbs,
