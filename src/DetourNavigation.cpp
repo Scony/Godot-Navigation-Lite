@@ -638,6 +638,11 @@ int DetourNavigation::process_large_mesh(
           k++;
         }
 
+        if (faces.size() == 0)
+        {
+          continue;
+        }
+
         Ref<ArrayMesh> am;
         am.instance();
         Array arrays;
